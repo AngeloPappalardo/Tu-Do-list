@@ -1,28 +1,21 @@
 body {
-    background-color: #e2d5de;
+  background-color: #e2d5de;
 }
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .to-do-list {
- border-radius: 20px;
- background-color: white;
- margin: 340px;
- margin-top: 100px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 340px;
+  margin-top: 100px;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-
 ul {
   padding: 0;
   border-radius: 30px;
   list-style: none;
 }
-
 
 ul li {
   cursor: pointer;
@@ -58,7 +51,6 @@ ul li.checked::before {
   width: 7px;
 }
 
-
 .close {
   position: absolute;
   right: 0;
@@ -92,15 +84,13 @@ input {
 
 .addBtn {
   padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
+  width: 10%;
+  background: #1266f1;
+  color: white;
   text-align: center;
   font-size: 16px;
-  cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 .addBtn:hover {
@@ -123,16 +113,15 @@ input {
     margin: 200px;
     margin-top: 100px;
   }
-
 }
 @media screen and (max-width: 768px) {
-  .to-do-list{
+  .to-do-list {
     margin: 150px;
     margin-top: 100px;
   }
 }
 @media screen and (max-width: 576px) {
-  .to-do-list{
+  .to-do-list {
     margin: 100px;
     margin-top: 100px;
   }
