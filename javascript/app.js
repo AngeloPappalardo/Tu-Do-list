@@ -1,14 +1,30 @@
+// creare checkbox
+const myNodelist = document.getElementsByTagName("li");
+let i;
+
+for (i = 0; i < myNodelist.length; i++) {
+  const input = document.createElement("INPUT");
+  input.setAttribute("type", "checkbox");
+  input.className = "checked";
+  myNodelist[i].appendChild(input);
+}
 
 // creare uno un pulsante close
 
-const myNodelist = document.getElementsByTagName("li");
-let i;
 for (i = 0; i < myNodelist.length; i++) {
   const span = document.createElement("span");
   const txt = document.createTextNode("x");
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
+}
+
+// creare un attributo
+
+for (i = 0; i < myNodelist.length; i++) {
+  const Attribute = document.createElement("hr");
+  Attribute.className = "line";
+  myNodelist[i].appendChild(Attribute);
 }
 
 // creare una funzione per nascondere l'elemento
@@ -21,7 +37,7 @@ for (i = 0; i < close.length; i++) {
   };
 }
 
-// creare una funzione per il simbolo "spuntato"
+// creare una funzione per il text-decoration
 
 const list = document.querySelector("ul");
 list.addEventListener(
@@ -51,6 +67,15 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+
+  const input = document.createElement("INPUT");
+  input.setAttribute("type", "checkbox");
+  input.className = "checked";
+  li.appendChild(input);
+
+  const Attribute = document.createElement("hr");
+  Attribute.className = "line";
+  li.appendChild(Attribute);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
