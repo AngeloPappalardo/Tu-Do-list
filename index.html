@@ -11,26 +11,30 @@
   <body>
     <div class="container">
       <div class="to-do-list">
-        <div id="myDIV" class="header">
+        <div class="header">
           <h2>Awesome Todo List</h2>
           <div class="textareaBtn">
             <textarea
-              id="mytextarea"
+              id="textArea"
               placeholder="What do you need to do today?"
             ></textarea>
-            <span onclick="newElement()" class="addBtn">ADD</span>
+            <button type="button" id="add-element" class="addBtn">ADD</button>
           </div>
         </div>
-        <ul id="myUL">
-          <li>Cras justo odio</li>
-          <li class="checked">Dapibus ac facilisis in</li>
-          <li>Morbi leo risus</li>
-          <li>Porta ac consectetur ac</li>
-          <li>Vestibulum at eros</li>
-          <li>Morbi leo risus</li>
+        <ul id="list">
         </ul>
       </div>
     </div>
-    <script src="/javascript/app.js" async defer></script>
+
+    <template id="item-template">
+      <li class="element">
+        <input type="checkbox" />
+        <span></span>
+        <button type="button">X</button>
+      </li>
+    </template>
+<!-- 
+    <script src="/javascript/app.js" async defer></script> -->
+    <script src="/javascript/main.js" async defer></script>
   </body>
 </html>

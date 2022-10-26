@@ -1,31 +1,41 @@
 // creare checkbox
 const myNodelist = document.getElementsByTagName("li");
-let i;
 
-for (i = 0; i < myNodelist.length; i++) {
-  const input = document.createElement("INPUT");
-  input.setAttribute("type", "checkbox");
-  input.className = "checked";
-  myNodelist[i].appendChild(input);
-}
-
-// creare uno un pulsante close
-
-for (i = 0; i < myNodelist.length; i++) {
+function createSpan() {
   const span = document.createElement("span");
   const txt = document.createTextNode("x");
   span.className = "close";
   span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+
+  return span
 }
 
-// creare un attributo
+function createCheckbox() {
+  const input = document.createElement("INPUT");
+  input.setAttribute("type", "checkbox");
+  input.className = "checked";
 
-for (i = 0; i < myNodelist.length; i++) {
+  return input
+}
+
+function createLine() {
   const Attribute = document.createElement("hr");
   Attribute.className = "line";
-  myNodelist[i].appendChild(Attribute);
+
+  return Attribute
 }
+
+for (let i = 0; i < myNodelist.length; i++) {
+  const span = createSpan()
+  myNodelist[i].appendChild(span);
+
+  const checkbox = createCheckbox()
+  myNodelist[i].appendChild(checkbox);
+
+  const line = createLine()
+  myNodelist[i].appendChild(line);
+}
+
 
 // creare una funzione per nascondere l'elemento
 
@@ -62,20 +72,15 @@ function newElement() {
   }
   document.getElementById("mytextarea").value = "";
 
-  const span = document.createElement("span");
-  const txt = document.createTextNode("x");
-  span.className = "close";
+  const span = createSpan()
   span.appendChild(txt);
   li.appendChild(span);
 
-  const input = document.createElement("INPUT");
-  input.setAttribute("type", "checkbox");
-  input.className = "checked";
+  const input = createCheckbox()
   li.appendChild(input);
 
-  const Attribute = document.createElement("hr");
-  Attribute.className = "line";
-  li.appendChild(Attribute);
+  const line = createLine()
+  li.appendChild(line);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
